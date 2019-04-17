@@ -24,8 +24,11 @@
         </table>
     @endif
 
-    {!! link_to_route("tasks.create", "新規タスクの登録", null, ["class" => "btn btn-primary"]) !!}
+        {!! link_to_route("tasks.create", "新規タスクの登録", null, ["class" => "btn btn-primary"]) !!}
 
-
-
+    <div class="mt-3">
+        <ul class="pagination justify-content-center">
+            {{ $tasks->render("pagination::bootstrap-4") }}
+        </ul>
+    </div>
 @endsection
